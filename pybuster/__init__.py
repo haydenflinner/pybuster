@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """ Module for dirbusting a URL. """
 
+__author__ = 'Hayden Flinner <hayden@flinner.me>'
+__version__ = '0.1.0'
+
 import sys
 import logging
 from datetime import timedelta
@@ -112,7 +115,7 @@ class Result:
         self.hit = hit
         self.response_code = response_code
 
-    # Wish I could use a namedtuple for these, but didn't like the pagefull of un-necessary functions
+    # Wish I could use a namedtuple for these, but didn't like the page full of un-necessary functions
     # added to the help() page for the module that way.
     __eq__ = lambda self, other: self.url == other.url
     __str__ = lambda self: self.url + " | " + self.response_code
